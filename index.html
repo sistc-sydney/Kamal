@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DreamHome Real Estate</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Kamal Real Estate</h1>
+        <nav>
+            <a href="#properties">Properties</a>
+            <a href="#calculator">Mortgage Calculator</a>
+            <a href="#contact">Schedule Viewing</a>
+        </nav>
+    </header>
+
+    <section id="properties">
+        <h2>Featured Properties</h2>
+        <div class="properties-grid" id="propertyContainer"></div>
+    </section>
+
+    <section id="calculator">
+        <h2>Mortgage Calculator</h2>
+        <div class="form-box">
+            <form onsubmit="calculateMortgage(event)">
+                <label for="amount">Loan Amount</label>
+                <input type="number" id="amount" placeholder="e.g. 250000" required>
+
+                <label for="rate">Interest Rate (%)</label>
+                <input type="number" id="rate" step="0.01" placeholder="e.g. 5.5" required>
+
+                <label for="years">Term (years)</label>
+                <input type="number" id="years" placeholder="e.g. 30" required>
+
+                <button type="submit">Calculate</button>
+                <p id="monthlyPayment" class="result"></p>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Request a Property Viewing</h2>
+        <div class="form-box">
+            <form action="submit_form.php" method="POST">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Your full name" required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="example@mail.com" required>
+
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="phone" placeholder="Optional">
+
+                <label for="property">Property Interested In</label>
+                <input type="text" name="property" id="property" placeholder="E.g. 3 BHK Villa">
+
+                <button type="submit">Request Viewing</button>
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 DreamHome Real Estate</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
